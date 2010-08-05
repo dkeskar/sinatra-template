@@ -1,11 +1,9 @@
 # example model file
 class Profile
-  include DataMapper::Resource
+  include MongoMapper::Document
 
-  property :id,         Serial
-  property :name,       String  
-  property :created_at, DateTime
-  property :updated_at, DateTime
+  key :name,       String  
+  timestamps!
 
   validates_presence_of :name
 end
