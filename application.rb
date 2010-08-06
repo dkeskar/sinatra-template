@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'sinatra'
+require 'haml'
+
 require 'environment'
 
 configure do
@@ -20,3 +22,4 @@ end
 get '/' do
   haml :root
 end
+
